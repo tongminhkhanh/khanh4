@@ -31,7 +31,7 @@ const generatePrompt = (data: LessonInput): string => {
 
   let methodInstruction = "";
   if (data.teachingMethod && data.teachingMethod !== 'Phương pháp Tích cực (Mặc định)') {
-      methodInstruction = `=== YÊU CẦU ĐẶC BIỆT VỀ PHƯƠNG PHÁP: ${data.teachingMethod.toUpperCase()} ===`;
+    methodInstruction = `=== YÊU CẦU ĐẶC BIỆT VỀ PHƯƠNG PHÁP: ${data.teachingMethod.toUpperCase()} ===`;
   }
 
   const hasAttachments = data.attachments && data.attachments.length > 0;
@@ -50,7 +50,9 @@ THÔNG TIN ĐẦU VÀO:
 - Thời lượng: ${data.duration}
 ${data.topicContext ? `- Ghi chú đặc biệt: ${data.topicContext}` : ''}
 
-=== YÊU CẦU QUAN TRỌNG: TUYỆT ĐỐI KHÔNG SINH PHẦN "CÁC HOẠT ĐỘNG DẠY HỌC CHỦ YẾU" DƯỚI DẠNG BẢNG HOẠT ĐỘNG GIÁO VIÊN VÀ HỌC SINH. ===
+=== YÊU CẦU QUAN TRỌNG VỀ ĐỊNH DẠNG: PHẦN "CÁC HOẠT ĐỘNG DẠY HỌC CHỦ YẾU" BẮT BUỘC PHẢI TRÌNH BÀY DƯỚI DẠNG BẢNG 2 CỘT. ===
+Cột 1: Hoạt động của giáo viên
+Cột 2: Hoạt động của học sinh
 
 HƯỚNG DẪN CỤ THỂ CHO LOẠI BÀI NÀY:
 ${specificInstruction}
@@ -62,6 +64,7 @@ ${hasAttachments ? `Sử dụng nội dung từ file đính kèm để làm ng�
 1. **Toán học & LaTeX**: Mọi biểu thức toán học BẮT BUỘC phải viết bằng LaTeX giữa dấu \`$\` hoặc \`$$\`.
 2. **Danh sách**: Dùng gạch đầu dòng "-".
 3. **Tiêu đề**: Dùng #, ##, ### theo chuẩn Markdown.
+4. **Bảng**: Sử dụng Markdown Table chuẩn.
 
 ---
 CẤU TRÚC GIÁO ÁN MONG MUỐN:
@@ -74,8 +77,13 @@ CẤU TRÚC GIÁO ÁN MONG MUỐN:
 1. **Giáo viên**
 2. **Học sinh**
 
-## III. NỘI DUNG VÀ TIẾN TRÌNH DẠY HỌC
-*(Mô tả chi tiết các bước dạy học dưới dạng văn bản và danh sách, không dùng bảng GV-HS)*
+## III. CÁC HOẠT ĐỘNG DẠY HỌC CHỦ YẾU
+*(Bắt buộc dùng bảng 2 cột như mẫu dưới đây)*
+
+| Hoạt động của giáo viên | Hoạt động của học sinh |
+| :--- | :--- |
+| **1. Khởi động (5 phút)**<br>- GV tổ chức trò chơi...<br>- GV đặt câu hỏi... | <br>- HS tham gia trò chơi...<br>- HS trả lời... |
+| **2. Khám phá (15 phút)**<br>... | ... |
 
 ## IV. ĐIỀU CHỈNH SAU BÀI DẠY
 - .........................
