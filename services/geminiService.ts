@@ -69,10 +69,10 @@ ${hasAttachments ? `Sử dụng nội dung từ file đính kèm để làm ng�
 ---
 CẤU TRÚC GIÁO ÁN MONG MUỐN:
 ## I. YÊU CẦU CẦN ĐẠT
-(Chỉ ghi các biểu hiện cụ thể của học sinh, KHÔNG ghi tên năng lực/phẩm chất. Ví dụ: thay vì ghi "Năng lực tự chủ: Tự giác làm bài", chỉ ghi "Tự giác làm bài")
-1. **Năng lực đặc thù**: (Liệt kê các đầu dòng biểu hiện)
-2. **Năng lực chung**: (Liệt kê các đầu dòng biểu hiện)
-3. **Phẩm chất**: (Liệt kê các đầu dòng biểu hiện)
+(Liệt kê trực tiếp các biểu hiện cần đạt của học sinh bằng gạch đầu dòng "-". KHÔNG chia mục Năng lực đặc thù/Năng lực chung/Phẩm chất. KHÔNG ghi tên năng lực.)
+- [Biểu hiện 1]
+- [Biểu hiện 2]
+- ...
 
 ## II. ĐỒ DÙNG DẠY HỌC
 1. **Giáo viên**
